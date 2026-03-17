@@ -37,3 +37,45 @@ if you want to install single packages use `uv add <package_name>`
 if you want to install multiple packages use `uv add -r requirements.txt`
 
 pyproject.toml is the file where we are going to update the names of  all the installed packages.
+
+Create src folder and __init__.py file inside src folder to consider that as package.
+
+Under src folder we are going to create 4 folders.
+
+- graphs
+- llms
+- nodes
+- states
+and __init__.py file inside each folder.
+
+.env is going to hold all our important keys and secrets.
+
+1) Langchain_project
+2) langchain_api_key
+3) groq_api_key
+
+
+## Project Structure
+
+```text
+Blog_Generation_AgenticAI/
+├── src/
+│   ├── __init__.py
+│   ├── graph/
+│   │   └── __init__.py
+│   ├── llms/
+│   │   └── __init__.py
+│   ├── nodes/
+│   │   └── __init__.py
+│   └── states/
+│       └── __init__.py
+├── images/
+│   └── result.png
+├── .gitignore
+├── .python-version
+├── NOTES.md
+├── Readme.md
+├── main.py
+├── pyproject.toml
+└── requirements.txt
+```
