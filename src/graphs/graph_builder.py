@@ -6,7 +6,7 @@ from src.nodes.blog_node import BlogNode
 class GraphBuilder:
     def __init__(self, llm):
         self.llm = llm
-        sefl.graph=StateGraph(BlogState)
+        self.graph = StateGraph(BlogState)
 
     def build_topic_graph(self):
         """
@@ -23,4 +23,8 @@ class GraphBuilder:
         self.graph.add_edge("title_creation", "content_generation")
         self.graph.add_edge("content_generation", END)
 
-        return self.graph
+        return self.graph.compile()
+    
+    def setup_graph(self, usecase):
+        if usecase == "topic":
+            return self.build_topic_graph()

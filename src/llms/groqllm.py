@@ -12,5 +12,5 @@ class GroqLLM:
             llm = ChatGroq(model_name= "llama-3.1-8b-instant")
             return llm
         except Exception as e:
-            raise ValueError("Error occured with exception : {e}")
+            raise ValueError(f"Error occured with exception : {e}")
             

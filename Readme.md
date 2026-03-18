@@ -79,3 +79,14 @@ Blog_Generation_AgenticAI/
 ├── pyproject.toml
 └── requirements.txt
 ```
+once app.py file create then run `python app.py` file will handle to run uvicorn
+
+To Test it we will use the postman https://www.postman.com/downloads/
+
+There only we can give get and post requests to test the APIs.
+
+0.0.0.0:8000 is basically referring to localhost url.
+
+127.0.0.1:8000 is also referring to localhost url.
+
+![Result](images/postman.png)
