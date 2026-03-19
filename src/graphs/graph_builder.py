@@ -23,8 +23,20 @@ class GraphBuilder:
         self.graph.add_edge("title_creation", "content_generation")
         self.graph.add_edge("content_generation", END)
 
-        return self.graph.compile()
+        return self.graph
     
     def setup_graph(self, usecase):
         if usecase == "topic":
             return self.build_topic_graph()
+
+## Below code is for langsmith langgraph studio
+
+llm=GroqLLM().get_llm()
+
+## get the graph
+graph = GraphBuilder(llm).build_topic_graph().compile()
+
+## In the langgraph.json we shared the path of this file in dependencies
+# we created graph_builder variable to handle the responsibility of compiled graph
+
+##

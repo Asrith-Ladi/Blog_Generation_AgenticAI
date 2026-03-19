@@ -14,8 +14,7 @@ ls_key = os.getenv("LANGSMITH_API_KEY")
 if ls_key:
     os.environ["LANGSMITH_API_KEY"] = ls_key
 
-## APIs
-
+# APIs
 @app.post("/blogs")
 async def create_blogs(request: Request):
     data = await request.json()

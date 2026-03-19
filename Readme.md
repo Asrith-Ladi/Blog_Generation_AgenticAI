@@ -90,3 +90,25 @@ There only we can give get and post requests to test the APIs.
 127.0.0.1:8000 is also referring to localhost url.
 
 ![Result](images/postman.png)
+
+Langsmith platform
+![Result](images/langsmith.png)
+
+This Langgraph studio will be quite amazing because you will be able to debug this entire application that we have developed with respect to the graph builder in a much more easier and efficient way.
+
+So, Monitoring will be a very key role if you are specifically using graph studio.
+
+- create langgraph.json file, now inside thsi langgraph.json we are going to write some of the configuration file, actually help us to start this or run this entire application directly into langgraph studio.
+
+[imp] before testing in langgraph, make sure to run the app.py file and check postman.
+
+keep app.py run in one cmd and open another cmd to test in langgraph.
+
+`(Blog_Generation_AgenticAI) D:\Projects\AgenticAI\Blog_Generation_AgenticAI>langgraph dev`
+
+![Result](images/langgraph_result.png)
+
+we can also interrupt the graph execution by clicking on the interrupt button.
+![Result](images/langgraph_interrupt.png)
+
+Note : While exectuing langgraph dev, need to run app.py in one cmd and langgraph dev in another cmd. langgraph.json allowing us to directly execute in the graph studio in the cloud.
