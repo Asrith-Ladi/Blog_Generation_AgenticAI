@@ -7,12 +7,12 @@ class GraphBuilder:
     def __init__(self, llm):
         self.llm = llm
         self.graph = StateGraph(BlogState)
+        self.blog_node_obj = BlogNode(self.llm)
 
     def build_topic_graph(self):
         """
         Build a graph to generate based on the topic
         """
-        self.blog_node_obj = BlogNode(self.llm)
         ## Nodes
 
         self.graph.add_node("title_creation", self.blog_node_obj.title_creation)
@@ -25,6 +25,16 @@ class GraphBuilder:
 
         return self.graph
     
+    def build_language_graph(self):
+        """Building a graph for blog generation with inputs topic and language
+        """
+
+        print(self.llm)
+
+        # Nodes
+        self.graph.add_node("title_creation",self.blog_node_obj.title_creation)
+        self.graph.add_node("content_creation",self.blog_node_obj.content_generation)    
+
     def setup_graph(self, usecase):
         if usecase == "topic":
             return self.build_topic_graph()

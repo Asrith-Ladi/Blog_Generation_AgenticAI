@@ -112,3 +112,9 @@ we can also interrupt the graph execution by clicking on the interrupt button.
 ![Result](images/langgraph_interrupt.png)
 
 Note : While exectuing langgraph dev, need to run app.py in one cmd and langgraph dev in another cmd. langgraph.json allowing us to directly execute in the graph studio in the cloud.
+
+# Now going to build the blog generation in different languages
+
+- Langgraph deployment is paid so using tracing for testing
+
+![Result](images/request.png) 
